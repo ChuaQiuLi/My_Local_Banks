@@ -5,22 +5,22 @@
     android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/btnDbs"
+    <TextView
+        android:id="@+id/tvDbs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
         android:text="@string/dbs" />
 
-    <Button
-        android:id="@+id/btnOcbc"
+    <TextView
+        android:id="@+id/tvOcbc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
         android:text="@string/ocbc" />
 
-    <Button
-        android:id="@+id/btnUob"
+    <TextView
+        android:id="@+id/tvUob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
