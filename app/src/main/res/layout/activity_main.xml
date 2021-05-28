@@ -1,28 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/tvDbs"
+    <Button
+        android:id="@+id/btnDbs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
-        android:text="@string/dbs" />
+        android:text="@string/dbs"
+        app:backgroundTint="#1333E4" />
 
-    <TextView
-        android:id="@+id/tvOcbc"
+    <Button
+        android:id="@+id/btnOcbc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
-        android:text="@string/ocbc" />
+        android:text="@string/ocbc"
+        app:backgroundTint="#2C3773" />
 
-    <TextView
-        android:id="@+id/tvUob"
+    <Button
+        android:id="@+id/btnUob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
-        android:text="@string/uob" />
+        android:text="@string/uob"
+        app:backgroundTint="#3F51B5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_favourite_bank"
+            android:textColor="#040404" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginLeft="20sp"
+            android:hint="@string/bank_name" />
+    </LinearLayout>
+
 </LinearLayout>

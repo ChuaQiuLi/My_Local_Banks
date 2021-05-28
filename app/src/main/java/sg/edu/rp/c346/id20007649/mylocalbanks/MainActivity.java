@@ -19,9 +19,9 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-   TextView tvDbs;
-   TextView tvOcbc;
-   TextView tvUob;
+   TextView btnDbs;
+   TextView btnOcbc;
+   TextView btnUob;
 
     String viewSelected = "";
 
@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvDbs = findViewById(R.id.tvDbs);
-        tvOcbc = findViewById(R.id.tvOcbc);
-        tvUob = findViewById(R.id.tvUob);
+        btnDbs = findViewById(R.id.btnDbs);
+        btnOcbc = findViewById(R.id.btnOcbc);
+        btnUob = findViewById(R.id.btnUob);
 
-        registerForContextMenu(tvDbs);
-        registerForContextMenu(tvOcbc);
-        registerForContextMenu(tvUob);
+        registerForContextMenu(btnDbs);
+        registerForContextMenu(btnOcbc);
+        registerForContextMenu(btnUob);
 
 
     }
@@ -56,18 +56,18 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.EnglishSelection) {
 
-            tvDbs.setText("DBS");
-            tvOcbc.setText("OCBC");
-            tvUob.setText("UOB");
+            btnDbs.setText("DBS");
+            btnOcbc.setText("OCBC");
+            btnUob.setText("UOB");
 
             return true;
         }
 
         else if (id == R.id.ChineseSelection) {
 
-            tvDbs.setText("星展银行");
-            tvOcbc.setText("华侨银行");
-            tvUob.setText("大华银行");
+            btnDbs.setText("星展银行");
+            btnOcbc.setText("华侨银行");
+            btnUob.setText("大华银行");
 
             return true;
         }
@@ -86,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
         menu.add(0,0,0,"Website");
         menu.add(0,1,1,"Contact the bank");
 
-        if (v == tvDbs){
+        if (v == btnDbs){
             viewSelected = "toptextview";
 
             Log.v("Context", "top view selected ");
         }
 
-        else if (v == tvOcbc) {
+        else if (v == btnOcbc) {
             viewSelected = "middletextview";
 
             Log.v("Context", "middle view selected ");
