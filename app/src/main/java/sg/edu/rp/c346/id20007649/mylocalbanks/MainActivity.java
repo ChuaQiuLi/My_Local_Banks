@@ -12,18 +12,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-   TextView btnDbs;
-   TextView btnOcbc;
-   TextView btnUob;
+   Button btnDbs;
+   Button btnOcbc;
+   Button btnUob;
+
 
     String viewSelected = "";
+
+
 
 
     @Override
@@ -35,9 +38,37 @@ public class MainActivity extends AppCompatActivity {
         btnOcbc = findViewById(R.id.btnOcbc);
         btnUob = findViewById(R.id.btnUob);
 
+
         registerForContextMenu(btnDbs);
         registerForContextMenu(btnOcbc);
         registerForContextMenu(btnUob);
+
+
+        btnDbs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnOcbc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        btnUob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+
 
 
     }
@@ -81,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
-        Log.v("Context", "create context");
+
 
         menu.add(0,0,0,"Website");
         menu.add(0,1,1,"Contact the bank");
@@ -93,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else if (v == btnOcbc) {
+
             viewSelected = "middletextview";
 
             Log.v("Context", "middle view selected ");
@@ -105,12 +137,16 @@ public class MainActivity extends AppCompatActivity {
             Log.v("Context", "bottom view selected ");
         }
 
+
+
     }
 
     @Override
-   public boolean onContextItemSelected(@NonNull MenuItem item) {
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
 
-       if (viewSelected.equalsIgnoreCase("toptextview") ) {
+
+
+           if (viewSelected.equalsIgnoreCase("toptextview") ) {
 
            if (item.getItemId() == 0  ){
 
@@ -176,10 +212,16 @@ public class MainActivity extends AppCompatActivity {
                Toast.makeText(MainActivity.this, "Going phone dialler ", Toast.LENGTH_LONG).show();
 
 
+
+
+
            }
        }
 
+
         return super.onContextItemSelected(item);
+
+
 
     }
 }
