@@ -7,5 +7,8 @@
     <string name="uob">UOB</string>
     <string name="please_select_a_bank_below">Please Select a bank below :</string>
     <string name="bank_details">Bank Details :</string>
+    <string name="picdbs">picdbs</string>
+    <string name="picuob">picuob</string>
+    <string name="picocbc">picocbc</string>
 
 </resources>
